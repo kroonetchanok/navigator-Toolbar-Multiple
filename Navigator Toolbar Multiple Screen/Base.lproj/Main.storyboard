@@ -21,25 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMR-NB-C2G">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="First Screen" id="eVZ-0A-OXf">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="g40-bx-esC"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="ji9-97-PlJ"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j1k-aX-azQ">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem image="ic_home.png" style="plain" id="AH9-1d-dTf"/>
+                                    <barButtonItem image="ic_home.png" style="plain" id="AH9-1d-dTf">
+                                        <connections>
+                                            <action selector="home:" destination="BYZ-38-t0r" id="ysL-hu-XFz"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Uns-Wg-kEk"/>
-                                    <barButtonItem systemItem="reply" id="b6D-aO-oX8"/>
+                                    <barButtonItem systemItem="reply" id="b6D-aO-oX8">
+                                        <connections>
+                                            <segue destination="8hn-76-9wR" kind="show" id="H1y-66-0IS"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="MsM-Oi-tFZ"/>
                                     <barButtonItem systemItem="trash" id="p6N-Lu-PGa"/>
                                 </items>
@@ -51,13 +48,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMR-NB-C2G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="First Screen" id="eVZ-0A-OXf">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="g40-bx-esC">
+                                            <connections>
+                                                <action selector="decreseNumber:" destination="BYZ-38-t0r" id="83T-NB-7RP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="ji9-97-PlJ">
+                                            <connections>
+                                                <action selector="increaseNumber:" destination="BYZ-38-t0r" id="RW9-0B-V7w"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="NumberLabel" destination="8Zt-lT-egi" id="Bfq-oV-eHT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-1276" y="-924"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="8p7-mY-SGY">
+            <objects>
+                <viewController id="8hn-76-9wR" customClass="SecondViewController" customModule="Navigator_Toolbar_Multiple_Screen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S8o-8N-RYx"/>
+                        <viewControllerLayoutGuide type="bottom" id="puN-n6-4oQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TCx-vI-egH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jX-kg-cFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572" y="-926"/>
         </scene>
     </scenes>
     <resources>
