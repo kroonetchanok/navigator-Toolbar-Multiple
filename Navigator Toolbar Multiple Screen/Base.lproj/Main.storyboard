@@ -34,16 +34,15 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Uns-Wg-kEk"/>
                                     <barButtonItem systemItem="reply" id="b6D-aO-oX8">
                                         <connections>
-                                            <segue destination="8hn-76-9wR" kind="show" id="H1y-66-0IS"/>
+                                            <segue destination="8hn-76-9wR" kind="showDetail" action="showViewController:sender:" id="H1y-66-0IS"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="MsM-Oi-tFZ"/>
                                     <barButtonItem systemItem="trash" id="p6N-Lu-PGa"/>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-lT-egi">
-                                <rect key="frame" x="84" y="149" width="206" height="369"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-lT-egi">
+                                <rect key="frame" x="174" y="297.5" width="27" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,6 +68,10 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Zt-lT-egi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mpe-ZV-Yda"/>
+                            <constraint firstItem="8Zt-lT-egi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rYZ-v7-uUu"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="NumberLabel" destination="8Zt-lT-egi" id="Bfq-oV-eHT"/>
@@ -76,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1276" y="-924"/>
+            <point key="canvasLocation" x="-497" y="-1334"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="8p7-mY-SGY">
@@ -89,12 +92,52 @@
                     <view key="view" contentMode="scaleToFill" id="TCx-vI-egH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RhE-PF-u2Z">
+                                <rect key="frame" x="0.0" y="20.5" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Second Screen" id="Hn0-c2-2rh">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="kd6-RE-nOt">
+                                            <connections>
+                                                <action selector="backButton:" destination="8hn-76-9wR" id="iLF-3b-X7c"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="nDR-rB-RaS">
+                                            <connections>
+                                                <action selector="next:" destination="8hn-76-9wR" id="Uvc-cA-zHa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yel-Vj-UMe">
+                                <rect key="frame" x="124" y="186.5" width="127" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="Par-KD-Nyc"/>
+                                    <constraint firstAttribute="height" constant="294" id="nNq-wc-BTt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yel-Vj-UMe" firstAttribute="centerX" secondItem="TCx-vI-egH" secondAttribute="centerX" id="1gY-hp-sfE"/>
+                            <constraint firstItem="yel-Vj-UMe" firstAttribute="centerY" secondItem="TCx-vI-egH" secondAttribute="centerY" id="eWr-n2-Abz"/>
+                            <constraint firstItem="yel-Vj-UMe" firstAttribute="centerX" secondItem="TCx-vI-egH" secondAttribute="centerX" id="kcP-ZD-VPx"/>
+                            <constraint firstItem="yel-Vj-UMe" firstAttribute="top" secondItem="RhE-PF-u2Z" secondAttribute="bottom" constant="122" id="lAg-tW-6a4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SecondNextButtom" destination="nDR-rB-RaS" id="gXK-iU-pCy"/>
+                        <outlet property="ShowLabel" destination="yel-Vj-UMe" id="Rhk-Wb-gYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jX-kg-cFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-572" y="-926"/>
+            <point key="canvasLocation" x="192.80000000000001" y="-1334.4827586206898"/>
         </scene>
     </scenes>
     <resources>

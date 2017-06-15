@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func increaseNumber(_ sender: Any) {
      showMessage(strMessange: "Click increaseNumber")
      intNumber += 1
-        intNumber = checkNumber(intNumber: intNumber)
+ //       intNumber = checkNumber(intNumber: intNumber)
         showNumber(intNumber: intNumber)
     }
     
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
       showMessage(strMessange: "Click decreseNumber")
       intNumber -= 1
-        intNumber = checkNumber(intNumber: intNumber)
+     //   intNumber = checkNumber(intNumber: intNumber)
         showNumber(intNumber: intNumber)
     }
     
@@ -51,21 +51,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }  // Main Method
     
-    func checkNumber(intNumber: Int) -> Int {
+    //func checkNumber(intNumber: Int) -> Int {
      // var intResult = intNumber
         
-        // At 11
-        if intNumber == 11
-        {
-           // intResult == -10
-        }
-        // at -11
-        if intNumber == -11  {
-          //  intResult == 10
-        }
-        
-        return 123
-    }
+//        // At 11
+//        if intNumber == 11
+//        {
+//           // intResult == -10
+//        }
+//        // at -11
+//        if intNumber == -11  {
+//          //  intResult == 10
+//        }
+//        
+//        return 123
+//    }
 
 func showNumber(intNumber: Int) -> Void {
     let strNumber = String(intNumber)

@@ -10,19 +10,74 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // Implicit
+    let strArrayNumber = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eighe", "Nine", "Ten"]
+    var intIndex = 0
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func next(_ sender: Any) {
+        
+        
+        
+        if intIndex < strArrayNumber.count {
+            intIndex += 1
+        }  else {
+           intIndex = 0
+        
+        }
+        print("intIndex ==> \(intIndex)")
+        
+        ShowLabel.text = strArrayNumber[intIndex]
+}
 
+    @IBAction func backButton(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet weak var ShowLabel: UILabel!
+  //  @IBOutlet weak var ShowLabel: UILabel!
+
+    
+  //  }
+    
+    
+    
+ //   @IBAction func secondBackButton(_ sender: Any) {
+    //}
+    
+    
+
+  
+
+
+    
+  //  override func viewDidLoad() {
+      //  super.viewDidLoad()
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     
-    print("This is SecondViewController")
+ //   print("This is SecondViewController")
     
     
     
-    }
+  //  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+  //  override func didReceiveMemoryWarning() {
+  //      super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
@@ -37,4 +92,4 @@ class SecondViewController: UIViewController {
     }
     */
 
-}
+//}
