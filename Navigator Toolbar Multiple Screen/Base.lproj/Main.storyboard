@@ -130,6 +130,15 @@
                             <constraint firstItem="yel-Vj-UMe" firstAttribute="top" secondItem="RhE-PF-u2Z" secondAttribute="bottom" constant="122" id="lAg-tW-6a4"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem id="Ha4-e1-LFT"/>
+                        <barButtonItem title="Back" id="ey6-RK-dGA">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="edB-A8-2eR"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="SecondNextButtom" destination="nDR-rB-RaS" id="gXK-iU-pCy"/>
                         <outlet property="ShowLabel" destination="yel-Vj-UMe" id="Rhk-Wb-gYQ"/>
